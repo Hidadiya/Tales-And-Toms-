@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-Signup</title>
+</head>
+<body>
+    <h3>welcome To Tales And Tomes</h3>
+    <h2>SignUp</h2>
+    <form action="{% url 'user-sign_up' %}" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">SignUp</button>
+    </form>
+    
+    <a href="{% url 'user-login' %}">Already have an account? Login</a>
+</body>
+</html>
